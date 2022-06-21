@@ -22,7 +22,7 @@ Repositório definido para a manutenção do controle de versão dos artefatos g
 |1|ARTHUR CASTRO DA CUNHA|[arthur-es](https://github.com/arthur-es)|Líder|
 |2|ARTHUR DE CAMARGO ALVES|[arthur65535](https://github.com/arthur65535)||
 |3|CLEVERSON LUIZ EPIFANIO DE OLIVEIRA|[cleoepifanio](https://github.com/cleoepifanio)||
-|4|LUCAS OLIVEIRA DE SOUZA|[lucasoliveirasouza](https://github.com/lucasoliveirasouza)||
+|4|FELIPE GALVÃO LAGARES|[felipelagares](https://github.com/felipelagares)||
 |5|PHELIPE GABRIEL DE SOUZA CECILIO|[PhelipeCecilio](https://github.com/PhelipeCecilio)||
 
 

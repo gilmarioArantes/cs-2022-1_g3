@@ -26,7 +26,7 @@ Repositório definido para a manutenção do controle de versão dos artefatos g
 |5|PHELIPE GABRIEL DE SOUZA CECILIO|[PhelipeCecilio](https://github.com/PhelipeCecilio)||
 
 ### Grupo do WhatsApp:
-|https://chat.whatsapp.com/BBIk271oDMK1AAURfgYkMq|
+https://chat.whatsapp.com/BBIk271oDMK1AAURfgYkMq
 
 ### Cronograma:
 |Sprint|Atividade|Responsável|Início|Fim|Situação|Avaliação|

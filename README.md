@@ -25,6 +25,8 @@ Repositório definido para a manutenção do controle de versão dos artefatos g
 |4|FELIPE GALVÃO LAGARES|[felipelagares](https://github.com/felipelagares)||98595-0444|
 |5|PHELIPE GABRIEL DE SOUZA CECILIO|[PhelipeCecilio](https://github.com/PhelipeCecilio)||
 
+### Grupo do WhatsApp:
+|https://chat.whatsapp.com/BBIk271oDMK1AAURfgYkMq|
 
 ### Cronograma:
 |Sprint|Atividade|Responsável|Início|Fim|Situação|Avaliação|

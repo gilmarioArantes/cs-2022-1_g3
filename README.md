@@ -2,31 +2,56 @@
 Repositório definido para a manutenção do controle de versão dos artefatos gerados pelo **Grupo 3** na construção de uma API REST, durante o curso da disciplina **Construção de Software**, do quinto período do curso de **Engenharia de Software**, do **INF/UFG**, no semestre 2022/1.
 
 ### Descrição do Produto:
+Fórum de discussões organizado em páginas, que exibe mensagens enviadas, que permite a visualização do nickname de cada usuário, suas mensagens, opções de responder, editar e apagar mensagens, etc.
 
 #### Requisitos:
-1. Requisito/funcionalidade: (nome/descrição)
-2. Requisito/funcionalidade: (nome/descrição)
-3. Requisito/funcionalidade: (nome/descrição)
-4. Requisito/funcionalidade: (nome/descrição)
-5. Requisito/funcionalidade: (nome/descrição)
+1. Requisito/funcionalidade: Requisito de interface 
+Interface de usuário clara, limpa e inteligível, com campo de digitação e botões destacados para rápida abstração.
+2. Requisito/funcionalidade: Campo de escrita de mensagem
+Campo retangular em branco, com bordas escuras para escrita da mensagem. Deve ser posicionado na parte inferior da interface.
+3. Requisito/funcionalidade: Botão de envio de mensagem
+Botão retangular pequeno, da mesma largura do campo de escrita, em relevo, posicionado logo à direita do campo de escrita, escrito “Enviar”.
+4. Requisito/funcionalidade: Status
+A flag STATUS, irá possibilitar o usuário de permanecer ONLINE, OFFLINE, AUSENTE, OCUPADO OU INVISÍVEL.
+5. Requisito/funcionalidade: Selecionar uma mensagem 
+Ao selecionar uma mensagem, será possível responder somente a mensagem selecionada.
 
 ### Tecnologia empregada no desenvolvimento:
 
+<img align="center" alt="Js" height="30" width="40" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-plain.svg">
+    JavaScript
+<br/>
+<br/>
+
+<img align="center" alt="React" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" />
+    NodeJs
+
+<br/>
+<br/>
+ <img align="center" alt="React" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" />
+    React
+
+
 ### Banco de Dados:
+
+<img align="center" alt="React" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-plain.svg" />
+    Postgres
+
 
 ### Local de deploy:
 
-### Participantes:
-|#|Nome|Usuário|Papel|Telefone|
-|---|---|---|---|---|
-|1|ARTHUR CASTRO DA CUNHA|[arthur-es](https://github.com/arthur-es)|Líder|
-|2|ARTHUR DE CAMARGO ALVES|[arthur65535](https://github.com/arthur65535)||99909-3344||
-|3|CLEVERSON LUIZ EPIFANIO DE OLIVEIRA|[cleoepifanio](https://github.com/cleoepifanio)||
-|4|FELIPE GALVÃO LAGARES|[felipelagares](https://github.com/felipelagares)||98595-0444|
-|5|PHELIPE GABRIEL DE SOUZA CECILIO|[PhelipeCecilio](https://github.com/PhelipeCecilio)||
+<img align="center" alt="React" height="30" width="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/heroku/heroku-original.svg" />
+    Heroku
 
-### Grupo do WhatsApp:
-https://chat.whatsapp.com/BBIk271oDMK1AAURfgYkMq
+### Participantes:
+|#|Nome|Usuário|Papel|
+|---|---|---|---|
+|1|PHELIPE GABRIEL DE SOUZA CECILIO|[PhelipeCecilio](https://github.com/PhelipeCecilio)|Líder|
+|2|ARTHUR DE CAMARGO ALVES|[arthur65535](https://github.com/arthur65535)|Desenvolvedor|
+|3|CLEVERSON LUIZ EPIFANIO DE OLIVEIRA|[cleoepifanio](https://github.com/cleoepifanio)|Desenvolvedor|
+|4|FELIPE GALVÃO LAGARES|[felipelagares](https://github.com/felipelagares)|Desenvolvedor|
+|5|ARTHUR CASTRO DA CUNHA|[arthur-es](https://github.com/arthur-es)|Desenvolvedor|
+
 
 ### Cronograma:
 |Sprint|Atividade|Responsável|Início|Fim|Situação|Avaliação|

@@ -17,14 +17,16 @@ Repositório definido para a manutenção do controle de versão dos artefatos g
 ### Local de deploy:
 
 ### Participantes:
-|#|Nome|Usuário|Papel|
-|---|---|---|---|
+|#|Nome|Usuário|Papel|Telefone|
+|---|---|---|---|---|
 |1|ARTHUR CASTRO DA CUNHA|[arthur-es](https://github.com/arthur-es)|Líder|
-|2|ARTHUR DE CAMARGO ALVES|[arthur65535](https://github.com/arthur65535)||
+|2|ARTHUR DE CAMARGO ALVES|[arthur65535](https://github.com/arthur65535)||99909-3344||
 |3|CLEVERSON LUIZ EPIFANIO DE OLIVEIRA|[cleoepifanio](https://github.com/cleoepifanio)||
-|4|FELIPE GALVÃO LAGARES|[felipelagares](https://github.com/felipelagares)||
+|4|FELIPE GALVÃO LAGARES|[felipelagares](https://github.com/felipelagares)||98595-0444|
 |5|PHELIPE GABRIEL DE SOUZA CECILIO|[PhelipeCecilio](https://github.com/PhelipeCecilio)||
 
+### Grupo do WhatsApp:
+https://chat.whatsapp.com/BBIk271oDMK1AAURfgYkMq
 
 ### Cronograma:
 |Sprint|Atividade|Responsável|Início|Fim|Situação|Avaliação|

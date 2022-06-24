@@ -2,6 +2,7 @@
 Repositório definido para a manutenção do controle de versão dos artefatos gerados pelo **Grupo 3** na construção de uma API REST, durante o curso da disciplina **Construção de Software**, do quinto período do curso de **Engenharia de Software**, do **INF/UFG**, no semestre 2022/1.
 
 ### Descrição do Produto:
+Fórum de discussões organizado em páginas, que exibe mensagens enviadas, que permite a visualização do nickname de cada usuário, suas mensagens, opções de responder, editar e apagar mensagens, etc.
 
 #### Requisitos:
 1. Requisito/funcionalidade: Requisito de interface 

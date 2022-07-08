@@ -2,6 +2,7 @@ import express from 'express'
 import {UserController} from "../controllers/UserController";
 import {ChatController} from "../controllers/ChatController";
 import {MessageController} from "../controllers/MessageController";
+import {AuthMiddleware} from "../middlewares/AuthMiddleware";
 
 const routes = express.Router()
 

@@ -27,6 +27,7 @@
     "@prisma/client": "^4.0.0",
     "@typescript-eslint/eslint-plugin": "^5.16.0",
     "@typescript-eslint/parser": "^5.16.0",
+    "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "eslint": "^8.11.0",

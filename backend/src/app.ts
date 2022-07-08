@@ -5,7 +5,7 @@ import passport from 'passport'
 import config from './config'
 import routes from './routes'
 
-import morgan from './middlewares/logger.middleware'
+import morgan from './middlewares/LoggerMiddleware'
 import Logger from './utils/logger.utils'
 
 const app = express()

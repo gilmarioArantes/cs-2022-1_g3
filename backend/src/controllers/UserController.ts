@@ -1,5 +1,6 @@
 import {Request, Response} from "express";
 import {prisma} from "../database/prismaClient";
+
 const bcrypt = require('bcrypt');
 
 export class UserController {
@@ -40,5 +41,36 @@ export class UserController {
             res.status(500).json({message: 'Internal Server Error'});
         }
     }
+
+    async updateUser(req: Request, res: Response) {
+        try {
+            const id = req.params.id;
+            let user = await prisma.user.findUnique({where: {id}});
+            if (!user) {
+                return res.json({message: 'User not found'})
+            }
+            user = await prisma.user.update({where: {id}, data: req.body});
+            return res.json(user);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({message: 'Internal Server Error'});
+        }
+    }
+
+    async deleteUser(req: Request, res: Response) {
+        try {
+            const id = req.params.id;
+            let user = await prisma.user.findUnique({where: {id}});
+            if (!user) {
+                return res.json({message: 'User not found'})
+            }
+            user = await prisma.user.delete({where: {id}});
+            return res.json(user);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({message: 'Internal Server Error'});
+        }
+    }
+
 
 }

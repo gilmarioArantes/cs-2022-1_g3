@@ -20,15 +20,23 @@ routes.post('/login', (req: express.Request, res: express.Response) => {
     res.status(200).json({message: 'API Request', user: req.body.user, password: req.body.password})
 })
 
-routes.post('/signup', userController.createUser);
+routes.post('/user', userController.createUser);
 routes.get('/user/:email', userController.getUser);
 routes.get('/users', userController.listUsers);
+routes.put("/user/:id", userController.updateUser);
+routes.delete("/user/:id", userController.deleteUser);
 
 routes.post('/chat', chatController.createChat);
 routes.get('/chat/:id', chatController.getChat);
+routes.get('/chats', chatController.listChats);
+routes.put("/chat/:id", chatController.updateChat);
+routes.delete("/chat/:id", chatController.deleteChat);
 
 routes.post('/message', messageController.createMessage);
+routes.get('/message/:id', messageController.getMessage);
 routes.get('/messages', messageController.listMessages);
-routes.get('/message/:id', messageController.listMessages);
+routes.put("/message/:id", messageController.updateMessage);
+routes.delete("/message/:id", messageController.deleteMessage);
+
 
 export default routes

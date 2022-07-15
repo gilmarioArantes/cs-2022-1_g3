@@ -22,6 +22,20 @@ export class MessageController {
                 }
             });
             return res.status(200).json(newMessage);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({message: 'Internal Server Error'});
+        }
+    }
+
+    async getMessage(req: Request, res: Response) {
+        try{
+            const id = req.params.id;
+            const message = await prisma.message.findUnique({where: {id}});
+            if (!message) {
+                return res.status(404).json({message: "Message not found"});
+            }
+            return res.json(message);
         }catch (error) {
             console.log(error);
             res.status(500).json({message: 'Internal Server Error'});
@@ -38,4 +52,35 @@ export class MessageController {
         }
     }
 
+    async updateMessage(req: Request, res: Response) {
+        try {
+            const id = req.params.id;
+            const message = await prisma.message.findUnique({where: {id}});
+            if (!message) {
+                return res.status(404).json({message: "Message not found"});
+            }
+            const updatedMessage = await prisma.message.update({where: {id}, data: req.body});
+            return res.json(updatedMessage);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({message: 'Internal Server Error'});
+        }
+    }
+
+    async deleteMessage(req: Request, res: Response) {
+        try {
+            const id = req.params.id;
+            const message = await prisma.message.findUnique({where: {id}});
+            if (!message) {
+                return res.status(404).json({message: "Message not found"});
+            }
+            const deletedMessage = await prisma.message.delete({where: {id}});
+            return res.json(deletedMessage);
+        } catch (error) {
+            console.log(error);
+            res.status(500).json({message: 'Internal Server Error'});
+        }
+    }
 }
+
+

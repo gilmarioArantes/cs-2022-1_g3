@@ -3,7 +3,7 @@ import {prisma} from "../database/prismaClient";
 
 export class ChatController {
 
-    async createChat(req: Request, res: Response) {
+    static async createChat(req: Request, res: Response) {
         const name = req.body.chatName;
         try {
             const chat = await prisma.chat.create({data: {name}});
@@ -14,7 +14,7 @@ export class ChatController {
         }
     }
 
-    async getChat(req: Request, res: Response) {
+    static async getChat(req: Request, res: Response) {
         const id = req.params.id;
         try {
             let chat = await prisma.chat.findUnique({where: {id}});
@@ -34,7 +34,7 @@ export class ChatController {
         }
     }
 
-    async listChats(req: Request, res: Response) {
+    static async listChats(req: Request, res: Response) {
         try {
             const chats = await prisma.chat.findMany();
             return res.json(chats);
@@ -44,7 +44,7 @@ export class ChatController {
         }
     }
 
-    async updateChat(req: Request, res: Response) {
+    static async updateChat(req: Request, res: Response) {
         const id = req.params.id;
         try {
             let chat = await prisma.chat.findUnique({where: {id}});
@@ -59,7 +59,7 @@ export class ChatController {
         }
     }
 
-    async deleteChat(req: Request, res: Response) {
+    static async deleteChat(req: Request, res: Response) {
         try {
             const id = req.params.id;
             let chat = await prisma.chat.findUnique({where: {id}});

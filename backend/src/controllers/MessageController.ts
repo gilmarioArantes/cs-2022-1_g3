@@ -3,7 +3,7 @@ import {prisma} from "../database/prismaClient";
 
 export class MessageController {
 
-    async createMessage(req: Request, res: Response) {
+    static async createMessage(req: Request, res: Response) {
         try {
             const {userId, chatId, text} = req.body;
             const chat = await prisma.chat.findUnique({where: {id: chatId}});
@@ -28,21 +28,21 @@ export class MessageController {
         }
     }
 
-    async getMessage(req: Request, res: Response) {
-        try{
+    static async getMessage(req: Request, res: Response) {
+        try {
             const id = req.params.id;
             const message = await prisma.message.findUnique({where: {id}});
             if (!message) {
                 return res.status(404).json({message: "Message not found"});
             }
             return res.json(message);
-        }catch (error) {
+        } catch (error) {
             console.log(error);
             res.status(500).json({message: 'Internal Server Error'});
         }
     }
 
-    async listMessages(req: Request, res: Response) {
+    static async listMessages(req: Request, res: Response) {
         try {
             const users = await prisma.message.findMany();
             return res.json(users);
@@ -52,7 +52,7 @@ export class MessageController {
         }
     }
 
-    async updateMessage(req: Request, res: Response) {
+    static async updateMessage(req: Request, res: Response) {
         try {
             const id = req.params.id;
             const message = await prisma.message.findUnique({where: {id}});
@@ -67,7 +67,7 @@ export class MessageController {
         }
     }
 
-    async deleteMessage(req: Request, res: Response) {
+    static async deleteMessage(req: Request, res: Response) {
         try {
             const id = req.params.id;
             const message = await prisma.message.findUnique({where: {id}});

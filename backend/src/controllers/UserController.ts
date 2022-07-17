@@ -5,7 +5,11 @@ const bcrypt = require('bcrypt');
 
 export class UserController {
 
-    async createUser(req: Request, res: Response) {
+   static async authenticate(email) {
+        return await prisma.user.findUnique({where: {email}});
+    }
+
+    static async createUser(req: Request, res: Response) {
         try {
             const {name, email} = req.body
             const password = await bcrypt.hash(req.body.password, 10);
@@ -21,7 +25,7 @@ export class UserController {
         }
     }
 
-    async listUsers(req: Request, res: Response) {
+    static async listUsers(req: Request, res: Response) {
         try {
             const users = await prisma.user.findMany();
             return res.json(users);
@@ -31,7 +35,7 @@ export class UserController {
         }
     }
 
-    async getUser(req: Request, res: Response) {
+    static async getUser(req: Request, res: Response) {
         try {
             const {email} = req.params;
             const user = await prisma.user.findUnique({where: {email}});
@@ -42,7 +46,7 @@ export class UserController {
         }
     }
 
-    async updateUser(req: Request, res: Response) {
+    static async updateUser(req: Request, res: Response) {
         try {
             const id = req.params.id;
             let user = await prisma.user.findUnique({where: {id}});
@@ -57,7 +61,7 @@ export class UserController {
         }
     }
 
-    async deleteUser(req: Request, res: Response) {
+    static async deleteUser(req: Request, res: Response) {
         try {
             const id = req.params.id;
             let user = await prisma.user.findUnique({where: {id}});

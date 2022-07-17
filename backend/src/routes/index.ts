@@ -6,37 +6,29 @@ import {AuthMiddleware} from "../middlewares/AuthMiddleware";
 
 const routes = express.Router()
 
-const userController = new UserController();
-const chatController = new ChatController();
-const messageController = new MessageController();
-
 routes.get('/', (req: express.Request, res: express.Response) => {
     res.status(200).json({message: 'API Request'})
 })
 
-//TODO: pegar as informações do usuário para validar um token
-routes.post('/login', (req: express.Request, res: express.Response) => {
-    console.log(req.body);
-    res.status(200).json({message: 'API Request', user: req.body.user, password: req.body.password})
-})
+routes.post('/login', AuthMiddleware.login, UserController.getUser)
 
-routes.post('/user', userController.createUser);
-routes.get('/user/:email', userController.getUser);
-routes.get('/users', userController.listUsers);
-routes.put("/user/:id", userController.updateUser);
-routes.delete("/user/:id", userController.deleteUser);
+routes.post('/user', UserController.createUser);//mudar para signup
+routes.get('/user/:email', AuthMiddleware.authenticate, UserController.getUser);
+routes.get('/users', AuthMiddleware.authenticate, UserController.listUsers);
+routes.put("/user/:id", AuthMiddleware.authenticate, UserController.updateUser);
+routes.delete("/user/:id", AuthMiddleware.authenticate, UserController.deleteUser);
 
-routes.post('/chat', chatController.createChat);
-routes.get('/chat/:id', chatController.getChat);
-routes.get('/chats', chatController.listChats);
-routes.put("/chat/:id", chatController.updateChat);
-routes.delete("/chat/:id", chatController.deleteChat);
+routes.post('/chat', AuthMiddleware.authenticate, ChatController.createChat);
+routes.get('/chat/:id', AuthMiddleware.authenticate, ChatController.getChat);
+routes.get('/chats', AuthMiddleware.authenticate, ChatController.listChats);
+routes.put("/chat/:id", AuthMiddleware.authenticate, ChatController.updateChat);
+routes.delete("/chat/:id", AuthMiddleware.authenticate, ChatController.deleteChat);
 
-routes.post('/message', messageController.createMessage);
-routes.get('/message/:id', messageController.getMessage);
-routes.get('/messages', messageController.listMessages);
-routes.put("/message/:id", messageController.updateMessage);
-routes.delete("/message/:id", messageController.deleteMessage);
+routes.post('/message', AuthMiddleware.authenticate, MessageController.createMessage);
+routes.get('/message/:id', AuthMiddleware.authenticate, MessageController.getMessage);
+routes.get('/messages', AuthMiddleware.authenticate, MessageController.listMessages);
+routes.put("/message/:id", AuthMiddleware.authenticate, MessageController.updateMessage);
+routes.delete("/message/:id", AuthMiddleware.authenticate, MessageController.deleteMessage);
 
 
 export default routes

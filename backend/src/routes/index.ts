@@ -23,6 +23,7 @@ routes.post('/login', (req: express.Request, res: express.Response) => {
 routes.post('/signup', userController.createUser);
 routes.get('/user/:email', userController.getUser);
 routes.get('/users', userController.listUsers);
+routes.put('/user/status', userController.changeStatus)
 
 routes.post('/chat', chatController.createChat);
 routes.get('/chat/:id', chatController.getChat);

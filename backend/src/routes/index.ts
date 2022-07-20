@@ -24,6 +24,8 @@ routes.post('/signup', userController.createUser);
 routes.get('/user/:email', userController.getUser);
 routes.get('/users', userController.listUsers);
 routes.put('/user/status', userController.changeStatus)
+routes.put('/user/update', userController.updateUser)
+routes.delete('/user/delete', userController.deleteUser)
 
 routes.post('/chat', chatController.createChat);
 routes.get('/chat/:id', chatController.getChat);

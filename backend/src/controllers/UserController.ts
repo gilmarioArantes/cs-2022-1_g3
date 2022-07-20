@@ -1,12 +1,14 @@
 import { PrismaClientKnownRequestError } from "@prisma/client/runtime";
 import {Request, Response} from "express";
 import {prisma} from "../database/prismaClient";
+const bcrypt = require('bcrypt');
 
 export class UserController {
 
     async createUser(req: Request, res: Response) {
         try {
-            const {name, email, password} = req.body
+            const {name, email} = req.body
+            const password = await bcrypt.hash(req.body.password, 10);
             let user = await prisma.user.findUnique({where: {email}});
             if (user) {
                 return res.json({message: 'User already exists'})
@@ -62,5 +64,5 @@ export class UserController {
             }
             
            
-    };
+    }
 }

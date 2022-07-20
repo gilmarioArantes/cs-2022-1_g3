@@ -44,7 +44,24 @@ export class UserController {
 
     //TODO: se der tempo criar logica para deletar ou editar um usuário.
     async updateUser() {}
-    async deletUser() {}
+    
+    async deleteUser(req:Request, res:Response) {
+        try{
+        const {id} = req.body;
+        console.log(id)
+        const deleteUser = await prisma.user.delete({where:{id}});
+        return res.json("User deleted successfully");
+    }catch(error){
+        if(error instanceof PrismaClientKnownRequestError){
+            console.log(error);
+            res.status(404).json({message: 'User not found'});
+        }
+        else{
+            console.log(error);
+            res.status(500).json({message: 'Internal Server Error'});
+        }
+        }
+    }
     
     async changeStatus(req:Request, res:Response){
         try{

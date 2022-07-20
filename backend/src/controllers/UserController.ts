@@ -42,7 +42,6 @@ export class UserController {
         }
     }
 
-    //TODO: se der tempo criar logica para deletar ou editar um usuário.
     async updateUser(req:Request, res:Response) {
         try{
             const {id,data} = req.body;

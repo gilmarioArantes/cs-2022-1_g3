@@ -3,3 +3,6 @@ node_modules
 logs
 .vscode/*
 .idea/*
+backend/yarn.lock
+package-lock.json
+yarn.lock

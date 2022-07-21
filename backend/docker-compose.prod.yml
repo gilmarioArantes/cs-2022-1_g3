@@ -1,0 +1,36 @@
+version: "3"
+
+services:
+  server:
+    build:
+      context: ./
+      shm_size: "512m"
+    env_file:
+      - ./.env.prod
+    depends_on:
+      - database
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    networks:
+      - foorum
+  database:
+    image: postgres:13-alpine
+    restart: always
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=strongpassword
+    ports:
+      - "5432:5432"
+    volumes:
+      - database:/var/lib/postgresql/data
+    networks:
+      - foorum
+
+networks:
+  foorum:
+    driver: bridge
+
+volumes:
+  database:
+    driver: local

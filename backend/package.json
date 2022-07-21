@@ -24,7 +24,7 @@
   "author": "Taylor Lawrence",
   "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^4.0.0",
+    "@prisma/client": "^3.15.2",
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",

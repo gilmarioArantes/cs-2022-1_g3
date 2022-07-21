@@ -1,0 +1,28 @@
+version: "3"
+
+services:
+  postgres:
+    image: postgres:14.4-alpine
+    environment:
+      POSTGRES_PASSWORD: "Postgres2019!"
+    ports:
+      - "5432:5432"
+    volumes:
+      - database:/var/lib/postgresql/data
+    networks:
+      - foorum
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080
+    networks:
+      - foorum
+
+networks:
+  foorum:
+    driver: bridge
+
+volumes:
+  database:
+    driver: local
